@@ -69,7 +69,7 @@ namespace KeresztrejtvenyGUI
 					};
 					tb.MaxLength = 1;
 
-					//tb.MouseDoubleClick += Mezo_DoubleClick;
+					tb.MouseDoubleClick += Mezo_DoubleClick;
 
 					Grid.SetRow(tb, i);
 					Grid.SetColumn(tb, j); //itt is kerestem kicsit interneten
@@ -78,6 +78,15 @@ namespace KeresztrejtvenyGUI
 					mezok[i, j] = tb;
 				}
 			}
+		}
+		private void Mezo_DoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			TextBox tb = sender as TextBox;
+
+			if (tb.Text == "-")
+				tb.Text = "#";
+			else
+				tb.Text = "-";
 		}
 	}
 }
