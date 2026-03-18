@@ -28,5 +28,10 @@
                         Click="Mentes_Click"
                         Margin="10,0"/>
 			</StackPanel>
+			<ScrollViewer>
+				<Grid x:Name="gridRacs"/>
+			</ScrollViewer>
+
+		</StackPanel>
 	</Grid>
 </Window>
