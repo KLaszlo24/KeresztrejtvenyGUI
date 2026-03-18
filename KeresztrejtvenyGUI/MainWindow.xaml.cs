@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -87,6 +88,38 @@ namespace KeresztrejtvenyGUI
 				tb.Text = "#";
 			else
 				tb.Text = "-";
+		}
+		private void Mentes_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				int index = (int)cbIndex.SelectedItem;
+				string fajlNev = $"kr{index}.txt";
+
+				using (StreamWriter sw = new StreamWriter(fajlNev))//StremWriter használatát megnéztem, nem voltam benne biztos
+				{
+					int sor = mezok.GetLength(0);
+					int oszlop = mezok.GetLength(1);
+
+					for (int i = 0; i < sor; i++)
+					{
+						string sorSzoveg = "";
+
+						for (int j = 0; j < oszlop; j++)
+						{
+							sorSzoveg += mezok[i, j].Text;
+						}
+
+						sw.WriteLine(sorSzoveg);
+					}
+				}
+
+				MessageBox.Show("Mentés kész");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }

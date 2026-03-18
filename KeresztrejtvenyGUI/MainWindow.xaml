@@ -18,15 +18,17 @@
 
 				<Button Content="Keresztrejtvény létrehozása"
 						Click="Letrehozas_Click"
-						Margin="10,0"/>
+						Width="155"
+						Margin="15,0"/>
 			</StackPanel>
 			<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
 				<Label Content="Index meghatározása: "/>
-				<ComboBox x:Name="cbIndex" Width="60" Margin="5"/>
+				<ComboBox x:Name="cbIndex" Width="55" Margin="5"/>
 
 				<Button Content="Keresztrejtvény mentése"
                         Click="Mentes_Click"
-                        Margin="10,0"/>
+						Width="140"
+                        Margin="15,0"/>
 			</StackPanel>
 			<ScrollViewer>
 				<Grid x:Name="gridRacs"/>
