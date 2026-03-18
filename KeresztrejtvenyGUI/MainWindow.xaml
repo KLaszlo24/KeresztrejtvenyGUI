@@ -17,8 +17,8 @@
 				<ComboBox x:Name="cbOszlop" Width="60" Margin="5"/>
 
 				<Button Content="Keresztrejtvény létrehozása"
-                        Click="Letrehozas_Click"
-                        Margin="10,0"/>
+						Click="Letrehozas_Click"
+						Margin="10,0"/>
 			</StackPanel>
 	</Grid>
 </Window>
